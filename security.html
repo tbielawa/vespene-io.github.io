@@ -114,7 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lock-down-postgresql">Lock Down PostgreSQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#understand-variables-snippets-values-are-semi-public">Understand Variables/Snippets Values are Semi-Public</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#climbout">Climbout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#projcet-insertion-and-spamming">Projcet Insertion and Spamming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-insertion-and-spamming">Project Insertion and Spamming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dependency-exploits">Dependency Exploits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ssl">SSL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#found-a-security-bug-not-mentioned-above">Found a Security Bug Not Mentioned Above?</a></li>
@@ -230,7 +230,7 @@ the Django admin view in settings.</p>
 </div>
 <div class="section" id="isolation-methods-for-worker-pools">
 <h2>Isolation Methods for Worker Pools<a class="headerlink" href="#isolation-methods-for-worker-pools" title="Permalink to this headline">¶</a></h2>
-<p>Vespene [Worker Pools](workers.html) have configurable isolation modes for security reasons.</p>
+<p>Vespene <a class="reference internal" href="workers.html#workers"><span class="std std-ref">Worker Pools</span></a> have configurable isolation modes for security reasons.</p>
 <p>If you have docker installed, the “Basic Container” isolation mode will be the easiest to set up.</p>
 <p>When using this mode, the base container image for the build is set <em>per project</em>, and the sudo
 settings on the worker pool are ignored.  Right now there isn’t a whitelist of what images users can choose
@@ -289,8 +289,8 @@ NFS or HTTP or FTP), those variable files are also accessible in the build root.
 <p>It’s generally not a problem that one developer might try to pollute the build directories of another build, but it is technically
 possible, and is possible in most production build systems.</p>
 </div>
-<div class="section" id="projcet-insertion-and-spamming">
-<h2>Projcet Insertion and Spamming<a class="headerlink" href="#projcet-insertion-and-spamming" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-insertion-and-spamming">
+<h2>Project Insertion and Spamming<a class="headerlink" href="#project-insertion-and-spamming" title="Permalink to this headline">¶</a></h2>
 <p>In the stock configuration any user can create any number of objects, because we trust users who are given access to Vespene
 are employees who have important business reasons for accessing the service.  While they cannot edit objects they do not have
 rights to, it does mean granting access to 3000 people to create projects could result in a degree of disorganization.</p>
